@@ -1,0 +1,43 @@
+/*@font-face {
+	font-family: 'UniversLTStd';
+	src: url('../fonts/UniversLTStd-Ex.otf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'UniversLTStd Bold';
+	src: url('../fonts/UniversLTStd-BoldEx.otf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'AkzidenzGrotesk Medium';
+	src: url('./fonts/AkzidenzGrotesk-Medium.otf');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'AkzidenzGrotesk Bold';
+	src: url('./fonts/AkzidenzGrotesk-Bold.otf');
+	font-weight: 700;
+	font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6, .font-title {
+	font-family: 'Tilo Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+}
+
+html, body, .font-akz-reg { 
+	font-family: 'AkzidenzGrotesk Regular', 'Helvetica Neue', Helvetica, Arial, sans-serif !important; 
+}
+
+.font-akz-med {
+	font-family: 'AkzidenzGrotesk Medium', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+}
+
+.font-akz-bold {
+	font-family: 'AkzidenzGrotesk Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+}*/

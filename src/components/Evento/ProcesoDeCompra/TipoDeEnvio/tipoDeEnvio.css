@@ -1,0 +1,26 @@
+.wrapperDireccion{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-column-gap: 10px;
+}
+
+.radioDireccion {}
+
+.labelPDV :nth-child(2) {
+	opacity: .5;
+}
+
+.labelPDV {
+	display: grid;
+	margin-bottom: 10px;
+}
+
+.radioGroupPDV {
+	display: block;
+}
+
+.radioGroupPDV [type="radio"]:not(:checked) + span,
+.radioGroupPDV [type="radio"]:checked + span {
+ height: auto;
+}
+

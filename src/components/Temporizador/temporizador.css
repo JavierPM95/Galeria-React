@@ -1,0 +1,30 @@
+.temporizador {
+	width: 80px;
+	margin: auto;
+	height: 80px;
+	font-size: 1.5rem;
+	position: relative;
+	text-align: center;
+}
+
+.temporizador svg {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 80px;
+	height: 80px;
+	transform: rotateY(-180deg) rotateZ(-90deg);
+}
+
+.temporizador svg circle {
+	stroke: #00A0C6;
+	stroke-linecap: round;
+	stroke-dasharray: 359;
+	transition: all .3s;
+}
+
+.tiempo {
+	color: #00A0C6;
+	display: inline-block;
+	line-height: 80px;
+}

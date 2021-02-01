@@ -1,0 +1,74 @@
+.contentValoresDeReferencia .titulo {
+	font-size: 2.3rem;
+	text-transform: uppercase;
+}
+
+.contentValoresDeReferencia .titulo,
+.contentValoresDeReferencia .subtitulo {
+	color: #7E7E7E;
+}
+
+.contentValoresDeReferencia .subtitulo {
+	font-size: 1.8rem;
+	margin-top: 0;
+}
+
+.contentValoresDeReferencia svg {
+	width: 100%;
+	margin: 30px 0;
+}
+
+.tablaDeReferencias th{
+	padding: 10px;
+}
+
+.tablaDeReferencias th,
+.tablaDeReferencias td {
+	color: #7E7E7E;
+	font-size: 1.2rem;
+	text-align: center;
+}
+
+.tablaDeReferencias td {
+	border-bottom: 1px solid #B8B8B8;
+	border-top: 1px solid #B8B8B8;
+	padding: 5px;
+}
+
+.tablaDeReferencias tr {
+	border: none;
+}
+
+.tablaDeReferencias .headValor,
+.tablaDeReferencias .headCargo {
+	width: 20%;
+	font-weight: normal;
+	font-size: 1rem;
+}
+
+.rowTable .texto {
+	text-align: left;
+}
+
+
+.rowTable .texto .moneda {
+	font-size: 1.5rem;
+}
+
+.rowTable .texto span {
+	text-transform: capitalize;
+}
+
+.rowTable .texto p {
+	text-transform: uppercase;
+	margin: 0;
+}
+
+.rowTable .color {
+	border: none;
+	box-shadow: 0px 1px 0px 6px #fff inset;
+}
+.rowTable .color,
+.rowTable .color div {
+	width: 30px;
+}

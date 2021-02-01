@@ -1,0 +1,37 @@
+.content {
+	width: 90%;
+	max-width: 600px;
+	margin: 50px auto;
+	text-align: center;
+}
+
+.content p {
+	margin: 0;
+	line-height: 1;
+	color: #7E7E7E;
+	font-size: 2.5rem;
+	text-transform: uppercase;
+}
+
+.content p > span {
+	color: #1B4B53;
+}
+
+.botonera {
+	margin: 30px auto;
+}
+
+.botonera .botonIr {
+	color: #1099AF;
+	background: transparent;
+}
+
+.botonera .boton {
+	margin: 0 15px;
+	border-radius: 30px;
+	border: 1px solid #1099AF;
+}
+
+.botonera .botonSeguir {
+	background: #1099AF;
+}

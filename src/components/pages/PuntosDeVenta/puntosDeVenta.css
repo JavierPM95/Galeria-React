@@ -1,0 +1,75 @@
+.gridC2C4C4,
+.gridC2C4C1C4 {
+	display: grid;
+	margin: 0 0 10px;
+	grid-column-gap: 30px;
+}
+
+.dl {
+	margin: 0;
+}
+
+.dl dt {
+	padding-top: 10px;
+	border-top: 1px solid #000;
+}
+
+.dl dd {
+	min-height: 85px;
+	margin: 0 0 10px;
+	padding: 0 10px 10px 12%;
+	border-bottom: 1px solid #000;
+}
+
+.small {
+	font-size: 12px;
+	font-style: italic;
+}
+
+.collapsible {
+	margin: 0;
+	border: none;
+	box-shadow: none;
+}
+
+.collapsibleItemHeader:after {
+	top: 0;
+	right: 15px;
+	content: '+';
+	height: 100%;
+	display: flex;
+	font-size: 1.3rem;
+	position: absolute;
+	align-items: center;
+	transition: transform 0.3s ease-in-out;
+}
+
+.collapsibleItemHeader[data-active='active']:after {
+	transform: rotate(-225deg);
+}
+
+.collapsibleItemHeader > span {
+	font-size: 12px;
+	padding-left: 5px;
+}
+
+.collapsibleItemHeader {
+	position: relative;
+	align-items: baseline;
+	border-top: 1px solid #000;
+	padding: 1rem 2.5rem 1rem 1rem;
+}
+
+.collapsibleItemBody {
+	padding: 10px 1.5rem;
+}
+
+
+@media only screen and (min-width: 1024px) {
+	.gridC2C4C4 {
+		grid-template-columns: 1fr 2fr 2fr;
+	}
+	.gridC2C4C1C4 {
+		grid-template-columns: 1fr 2fr 1fr 2fr;
+	}
+}

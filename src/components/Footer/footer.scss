@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+// Color
+@import "../../materialize/sass/components/color-variables";
+@import "../../materialize/sass/components/color-classes";
+
+// Variables;
+@import "../../materialize/sass/components/variables";
+
+@import "../../materialize/sass/mixins";
+
+footer {
+	border-top: 1px solid #1b4b53;
+	padding: $pad-global;
+	padding-top: 25px;
+	padding-bottom: 30px;
+	@include flexbox;
+	@include flex-just(space-between);
+
+	> .logo {
+		@include flex-shrink(0);
+		
+		img {
+			max-width: 180px;
+		}
+	}
+
+	.tuticket-link {
+		@include flex-shrink(0);
+		> .btn {
+			color: #1B4B53;
+			height: auto;
+			background: transparent;
+			box-shadow: none;
+			border: 1px solid #1099AF;
+			border-radius: 30px;
+		}
+	}
+
+	> .links {
+		color: #242424;
+		max-width: 700px;
+		padding: 0 10px;
+		text-align: center;
+
+		> a {
+			color: #242424;
+			display: inline-block;
+			padding: 0 2px;
+		}
+	}
+
+	@media #{$medium-and-down} {
+		@include flex-wrap(wrap);
+
+		> div:not(.links) {
+			@include flexbox;
+			@include flex-just(center);
+		}
+
+		> div {
+			width: 100%;
+			margin: 15px 0;
+		}
+	}
+}

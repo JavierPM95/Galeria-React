@@ -1,0 +1,74 @@
+.ResumenDeCompra .subTotal {
+	margin: 10px 0;
+	text-transform: uppercase;
+}
+
+.ResumenDeCompra .subTotal div {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-column-gap: 10px;
+}
+
+.ResumenDeCompra .subTotal div > span:last-child {
+	text-align: right;
+}
+
+.otrosServicios {
+	display: grid;
+	padding: 20px 0;
+	grid-template-columns: 2fr 1fr;
+}
+
+.otrosServicios > span:first-child {
+	padding: 0 0 5px;
+	grid-column: 1 / -1;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #1099AF;
+}
+
+.otrosServicios > span:first-child,
+.otrosServicios > .label > span {
+	color: #1099AF;
+}
+
+.otrosServicios > span:first-child,
+.otrosServicios > .label {
+	text-transform: uppercase;
+}
+
+.otrosServicios > .label > span {
+	text-transform: none;
+}
+
+.otrosServicios .value {
+	text-align: right;
+}
+
+.boton {
+	border-radius: 30px;
+}
+
+.boton, .boton:focus, .boton:hover {
+	background: #1099AF;
+}
+
+.total {
+	padding-top: 10px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.total > span:first-child {
+	text-transform: uppercase;
+}
+
+.total > span:last-child {
+	text-align: right;
+}
+
+.botones {
+	padding-top: 20px;
+	display: grid;
+	grid-template-columns: max-content 1fr max-content;
+	grid-column-gap: 30px;
+}

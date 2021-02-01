@@ -1,0 +1,152 @@
+@import "mixins";
+$height-progressbar: 4px;
+.slider {
+	position: relative;
+	height: 400px;
+	width: 100%;
+
+	// Fullscreen slider
+	&.fullscreen {
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+
+		ul.slides {
+			height: 100%;
+		}
+
+		ul.indicators {
+			z-index: 2;
+			bottom: 30px;
+		}
+	}
+
+	&.whithProgressBar {
+		height: calc(100% - #{$height-progressbar});
+	}
+
+	.slides {
+		background-color: $slider-bg-color;
+		margin: 0;
+		height: 400px;
+
+		li {
+			opacity: 0;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 1;
+			width: 100%;
+			height: inherit;
+			overflow: hidden;
+
+			img {
+				height: 100%;
+				width: 100%;
+				background-size: cover;
+				background-position: center;
+			}
+
+			.caption {
+				color: #fff;
+				position: absolute;
+				top: 15%;
+				left: 15%;
+				width: 70%;
+				opacity: 0;
+
+				p { color: $slider-bg-color-light; }
+			}
+
+			&.active {
+				z-index: 2;
+			}
+		}
+	}
+
+
+	.indicators {
+		position: absolute;
+		text-align: center;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: 0;
+
+		.indicator-item {
+			display: inline-block;
+			position: relative;
+			cursor: pointer;
+			height: 16px;
+			width: 16px;
+			margin: 0 12px;
+			background-color: transparent;
+			border: 1px solid #fff;
+			transition: background-color .3s;
+			border-radius: 50%;
+
+			&.active {
+				background-color: $slider-indicator-color;
+				border: 1px solid $slider-indicator-color;
+			}
+		}
+	}
+
+	.arrow-left, .arrow-right {
+		position: absolute;
+		display: inline-block;
+		width: 36px;
+		height: 36px;
+		border-left: 1px solid white;
+		border-top: 1px solid white;
+		backface-visibility: hidden;
+		top: calc(50% - 18px);
+		z-index: 300;
+		cursor: pointer;
+	}
+
+	.arrow-right {
+		@include transform(rotate(135deg) skew(-7deg, -7deg));
+		right: 40px;
+	}
+
+	.arrow-left {
+		@include transform(rotate(-45deg) skew(-7deg, -7deg));
+		left: 40px;
+	}
+
+	.progress-bar {
+		// @include transition(all .1s);
+		content: '';
+		position: absolute;
+		width: 0;
+		height: $height-progressbar;
+		background: #9CD1D9;
+		left: 0;
+		bottom: -#{$height-progressbar};
+
+		&.fullWidth {
+			width: 100% !important;
+		}
+	}
+
+	@media #{$medium-and-down} {
+		.arrow-left, .arrow-right {
+			width: 20px;
+			height: 20px;
+			top: calc(50% - 10px);
+		}
+
+		.arrow-right {
+			right: 15px;
+		}
+
+		.arrow-left {
+			left: 15px;
+		}
+	}
+}

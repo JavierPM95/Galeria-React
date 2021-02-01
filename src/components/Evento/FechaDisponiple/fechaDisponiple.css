@@ -1,0 +1,92 @@
+.fechaDisponiple {
+	width: 50%;
+	display: flex;
+	margin-bottom: 30px;
+}
+
+.fechaDisponiple:nth-child(odd) {
+	padding-right: 10px;
+}
+
+.fechaDisponiple:nth-child(even) {
+	padding-left: 10px;
+}
+
+.dayAndMonthBox {
+	width: 125px;
+	height: 125px;
+	margin-right: 5px;
+	flex-shrink: 0;
+	border: 1px solid #707070;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.day {
+	color: #1B4B53;
+	font-size: 3rem;
+	line-height: 1;
+}
+
+.month {
+	color: #1099AF;
+	font-size: 2.2rem;
+	font-weight: 300;
+	line-height: 1;
+}
+
+.boxInfo {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.boxInfo * {
+	width: calc(100%);
+}
+
+.boxInfo h3 {
+	color: #1099AF;
+	font-size: 1.3rem;
+	margin: 0;
+	text-transform: uppercase;
+}
+
+.boxInfo p {
+	color: #1B4B53;
+	font-size: 18px;
+	margin: 10px 0;
+}
+
+.boxInfo button {
+	max-width: 135px;
+}
+
+.btnComprar {
+	position: relative;
+	overflow: hidden;
+}
+
+.btnComprar .labelBtn {
+	position: relative;
+	z-index: 10;
+}
+
+.btnComprar .bgOcupado {
+	display: block;
+	position: absolute;
+	height: 100%;
+	top: 0;
+	left: 0;
+	border-top-left-radius: 30px;
+	border-bottom-left-radius: 30px;
+}
+
+@media only screen and (max-width: 767px) {
+	.fechaDisponiple {
+		width: 100%;
+		padding: 0 !important;
+		align-items: center;
+	}
+}

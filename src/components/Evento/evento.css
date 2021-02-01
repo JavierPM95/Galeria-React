@@ -1,0 +1,171 @@
+.evento .contenedor {
+	width: 90%;
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.evento .contenedor .colFechasDisponibles,
+.evento .contenedor .colMediosDePago {
+	width: 100%;
+}
+
+.fechasListado {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.newsletter {
+	background: #E7F7F9;
+}
+
+.newsletter {
+	border: 1px solid #707070;
+}
+
+/* Titulos secundarios */
+.fechaTitulo, .fechaDesde,
+.sobreLaBanda .titulo,
+.infoDelRecinto .titulo,
+.tituloVideo,
+.newsletter h4,
+.otrosEventos > h2:first-child,
+.infoDelRecinto h2,
+.noticias h2 {
+	text-transform: uppercase;
+}
+
+.fechaTitulo,
+.sobreLaBanda .titulo,
+.infoDelRecinto .titulo,
+.tituloVideo,
+.newsletter h4,
+.infoDelRecinto h2,
+.noticias h2 {
+	color: #1B4B53;
+}
+
+.newsletter {
+	padding-bottom: 20px !important;
+}
+
+.newsletter .headerNew {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 1.5rem 0 0;
+}
+
+.newsletter .headerNew img {
+	width: 40px;
+	margin: auto;
+}
+
+.newsletter h4 {
+	font-size: 1.2rem;
+	margin: 0;
+	flex-grow: 1;
+}
+
+.newsletter button {
+	color: #1099AF;
+	font-weight: 700;
+}
+
+.sobreLaBanda .titulo,
+.infoDelRecinto .titulo,
+.otrosEventos > h2:first-child {
+	font-size: 2.3rem;
+}
+
+.otrosEventos > h2:first-child {
+	color: #707070;
+	padding: 0 40px;
+}
+
+.infoDelRecinto h2,
+.noticias h2,
+.tituloVideo {
+ font-size: 2rem;
+}
+/* END - Titulos secundarios */
+
+
+
+.fechaDesde {
+	color: #9CD1D9;
+	font-size: 2rem;
+	margin: 0 0 50px;
+}
+
+.contentReferencias {
+	border-top: 1px solid #1099AF;
+	margin: 60px 0;
+}
+
+.seccionRedes {
+	height: 200px;
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+	/*background-image: url('/img/develop/redes-sociales.jpg');*/
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.seccionRedes a {
+	background: #74969d;
+	display: block;
+	padding: 10px;
+	margin: 0 15px 15px 0;
+}
+
+.seccionRedes img {
+	width: 60px;
+}
+
+.sobreLaBanda {
+	padding: 40px 0;
+}
+
+.sobreLaBanda img,
+.noticias img {
+	max-width: 100%;
+	margin: 10px auto 20px;
+	display: block;
+}
+
+.otrosEventos {
+	background: #EBF9FB;
+	padding: 30px 0;
+}
+
+.infoDelRecinto {
+
+}
+
+@media only screen and (min-width: 993px) {
+	.evento .contenedor {
+		flex-wrap: nowrap;
+	}
+
+	.evento .contenedor .colFechasDisponibles {
+		width: 66%;
+	}
+
+	.evento .contenedor .colMediosDePago {
+	 width: 34%;
+	}
+
+	.evento .contenedor .lineaVertical {
+		width: 1px;
+		background: #C9C9C9;
+		margin: 0 20px;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+
+}
