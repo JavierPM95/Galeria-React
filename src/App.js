@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="container">
       <div className="m-4">
-        <h2>Galeria de imagenes</h2>
+        <h2>Galeria de imagenes <span aria-label="camera">📸</span> </h2>
       </div>
       <SRLWrapper>
         <div className="container-galeria">
