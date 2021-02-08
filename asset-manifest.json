@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/Galeria-React/static/css/main.a8d08a8a.chunk.css",
+    "main.js": "/Galeria-React/static/js/main.15f55446.chunk.js",
+    "main.js.map": "/Galeria-React/static/js/main.15f55446.chunk.js.map",
+    "runtime-main.js": "/Galeria-React/static/js/runtime-main.d57bdedb.js",
+    "runtime-main.js.map": "/Galeria-React/static/js/runtime-main.d57bdedb.js.map",
+    "static/js/2.021dffd9.chunk.js": "/Galeria-React/static/js/2.021dffd9.chunk.js",
+    "static/js/2.021dffd9.chunk.js.map": "/Galeria-React/static/js/2.021dffd9.chunk.js.map",
+    "static/js/3.a3211f9d.chunk.js": "/Galeria-React/static/js/3.a3211f9d.chunk.js",
+    "static/js/3.a3211f9d.chunk.js.map": "/Galeria-React/static/js/3.a3211f9d.chunk.js.map",
+    "index.html": "/Galeria-React/index.html",
+    "static/css/main.a8d08a8a.chunk.css.map": "/Galeria-React/static/css/main.a8d08a8a.chunk.css.map",
+    "static/js/2.021dffd9.chunk.js.LICENSE.txt": "/Galeria-React/static/js/2.021dffd9.chunk.js.LICENSE.txt",
+    "static/media/foto1.4986d942.jpg": "/Galeria-React/static/media/foto1.4986d942.jpg",
+    "static/media/foto2.5d016299.jpg": "/Galeria-React/static/media/foto2.5d016299.jpg",
+    "static/media/foto3.12c2fe55.jpeg": "/Galeria-React/static/media/foto3.12c2fe55.jpeg",
+    "static/media/foto4.d2c3a716.jpeg": "/Galeria-React/static/media/foto4.d2c3a716.jpeg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d57bdedb.js",
+    "static/js/2.021dffd9.chunk.js",
+    "static/css/main.a8d08a8a.chunk.css",
+    "static/js/main.15f55446.chunk.js"
+  ]
+}
