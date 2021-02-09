@@ -5,8 +5,10 @@ import React, {
 	Fragment,
 	useEffect,
 } from 'react';
-import ReactNPS from 'nps-sdk-react';
 import { useParams, useHistory } from 'react-router-dom';
+
+/* NPS ePayment */
+import ReactNPS from 'nps-sdk-react';
 
 /* style */
 import cx from 'classnames';
@@ -33,6 +35,30 @@ const RadioGroup = lazy(() => {
 import serealizeData from './serealizeData';
 import httpClient from '../../../../utils/axios';
 
+let ReactNPSData = new ReactNPS({
+    env: 'implementation',
+    session: process.env.KEY_SESSION,
+    merchant: process.env.MERCHANT_ID,
+    fingerprint: true,
+    expDate: 'MMYY'
+})
+
+let npsInitialState = {
+	reactNPS: ReactNPSData,
+	result: {},
+	error: {}
+}
+
+let PaymentMethodTokenParams = {
+	card: {
+	  holder_name: "John Smith",
+	  number: "4001020000000017",
+	  exp_month: "12",
+	  exp_year: "2023",
+	  security_code: "123",
+	}
+}
+
 const initState = {
 	holderName: '',
 	numberCard: '',
@@ -55,13 +81,60 @@ const Pago = ({
 	const [ state, setState ] = useState(initState);
 	const [ startPay, setStartPay ] = useState(false);
 	const [ tarjetaCargadaValue, setTarjetaCargadaValue ] = useState('');
-	const [ formaDePagoValue, setFormaDePagoValue ] = useState('tarjetas-cargadas')
+	const [ formaDePagoValue, setFormaDePagoValue ] = useState('tarjetas-cargadas');
+	const [npsState, setNpsState] = useState(npsInitialState);
 
 	useEffect(() => {
 		if(formaDePagoValue == 'nueva-tarjeta') {
 			setTarjetaCargadaValue('')
 		}
 	}, [formaDePagoValue])
+
+	// NPS Token
+
+	const createTokenNewCard = async() => {
+		await npsState.reactNPS.createPaymentMethodToken(PaymentMethodTokenParams).then((e)=>{
+			console.log(e);
+	  }).catch((error)=>{
+			console.warn(error);
+	  });
+	}
+
+	(
+		async() => {
+			console.log(await createTokenNewCard())
+		}
+	)()
+
+	const createTokenSavedCard = async() => {
+		await npsState.reactNPS.recachePaymentMethodToken(PaymentMethodTokenParams).then((e)=>{
+			console.log(e);
+		}).catch((error)=>{
+			console.warn(error);
+		});
+	}
+
+	const retrieveToken = async() => {
+		await npsState.reactNPS.retrivePaymentMethodToken(PaymentMethodToken).then((e)=>{
+			console.log(e);
+		}).catch((error)=>{
+			console.warn(error);
+		});
+	}
+
+	// NPS Settings
+
+		// Set main config
+		npsState.reactNPS.setLanguage('es_AR');
+		npsState.reactNPS.setCountry('ARG');
+		npsState.reactNPS.setCurrency('032');
+		/* Primero informar si se requieren monto en centavo */
+		// npsState.reactNPS.setAmount('120000')
+
+		// NPS Validations
+		npsState.reactNPS.cardValidator();
+
+	// Handle Events
 
 	const handleClickResumen = async (e, action) => {
 		setStartPay(true);
@@ -131,6 +204,7 @@ const Pago = ({
 				<RadioGroup
 					radioClassNames={clasess.radioGroup}
 					name="tarjetas-cargadas-radio"
+					data-nps="card[payment_method_id]"
 					value={tarjetaCargadaValue}
 					onChange={(e) => setTarjetaCargadaValue(e.target.value)}
 					options={options}
@@ -158,7 +232,8 @@ const Pago = ({
 				<TextInput
 					s={12}
 					type='text'
-					name='holderName'
+					// name='holderName'
+					data-nps="card[holder_name]"
 					onChange={handleInput}
 					icon={'account_circle'}
 					value={state.holderName}
@@ -169,7 +244,8 @@ const Pago = ({
 				<TextInput
 					s={12}
 					type='text'
-					name='numberCard'
+					// name='numberCard'
+					data-nps="card[number]"
 					icon={'credit_card'}
 					onChange={handleInput}
 					value={state.numberCard}
@@ -189,6 +265,7 @@ const Pago = ({
 						format: 'yy/mm'
 					}}
 					s={12}
+					data-nps="card[exp_date]"
 					icon={'date_range'}
 					refInput={_refInputDate}
 					label='Fecha de expiración'
@@ -199,7 +276,8 @@ const Pago = ({
 				<TextInput
 					s={12}
 					type='text'
-					name='securityCode'
+					// name='securityCode'
+					data-nps="card[security_code]"
 					icon={'credit_card'}
 					onChange={handleInput}
 					value={state.securityCode}
@@ -207,7 +285,7 @@ const Pago = ({
 					globalClasses={clasess.inputIcon}
 				/>
 				<Checkbox
-					name='guardarTarjeta'
+					// name='guardarTarjeta'
 					onChange={handleInput}
 					value={state.guardarTarjeta}
 					filledIn
